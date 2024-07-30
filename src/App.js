@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React from 'react';
+import { Container, CssBaseline, Typography, Paper } from '@mui/material';
+import Tabs from './components/Tabs';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container component="main" maxWidth="sm" style={{ marginTop: '40px' }}>
+        <CssBaseline />
+        <Paper elevation={3} style={{ padding: '20px' }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            TODO App
+          </Typography>
+          <Tabs />
+          <TodoList />
+        </Paper>
+      </Container>
     </div>
   );
 }
